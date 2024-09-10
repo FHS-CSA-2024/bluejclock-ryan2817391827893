@@ -13,6 +13,12 @@ public class ClockDisplaySeconds
         seconds = new NumberDisplay(60);
         updateDisplay();
     }
+    public ClockDisplaySeconds(int hour, int minute, int second){
+        hours = new NumberDisplay(24);
+        minutes = new NumberDisplay(60);
+        seconds = new NumberDisplay(60);
+        setTime(hour, minute, second);
+    }
     public void timeTick(){
         seconds.increment();
         if(seconds.getValue()==0)
