@@ -14,6 +14,12 @@ public class ClockDisplay12Hour
         s = new NumberDisplay(60);
         updateDisplay();
     }
+    public ClockDisplay12Hour(int hour, int minute, int second, boolean mo){
+        h = new NumberDisplay(24);
+        m = new NumberDisplay(60);
+        s = new NumberDisplay(60);
+        setTime(hour, minute, second, mo);
+    }
     public String getTime(){
         return display;
     }
